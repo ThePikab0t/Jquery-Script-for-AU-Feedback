@@ -1,0 +1,11 @@
+tbl = jQuery('tbody')
+var rate = 1
+var j = 0
+jQuery.each(tbl,function(i,l){
+	if(i>=2){
+		jQuery(tbl[i]).children()[0].children[rate].children[0].children[0].click()
+	}
+    j=i;
+});
+$('textarea').val('Good')
+jQuery( ":submit" ).click()
