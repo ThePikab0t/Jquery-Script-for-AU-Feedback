@@ -1,0 +1,19 @@
+var tbl = jQuery('tbody');
+var rate = 1;
+var j = 0;
+
+jQuery.each(tbl, function(i, l) {
+  if (i >= 2) {
+    var children = jQuery(tbl[i]).children();
+    if (children.length > 0) {
+      var element = children.eq(0).children().eq(rate).children().eq(0).children().eq(0);
+      if (element.length > 0) {
+        element.click();
+      }
+    }
+  }
+  j = i;
+});
+
+$('textarea').val('Good');
+jQuery(":submit").click();
